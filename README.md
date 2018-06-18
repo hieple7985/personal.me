@@ -1,2 +1,2 @@
-# site.github.io
-My personal website
+# hieple.github.io
+My personal site
