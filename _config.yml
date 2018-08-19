@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Hiep Le, blog
+title: Hiep Le
 email: letronghiep1985@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   My journey so far
@@ -39,3 +39,7 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+job: Software Engineer
+slogan: Code | Data | Auto
+copyright: Copyright © 2008

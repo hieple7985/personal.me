@@ -309,7 +309,7 @@ table {
  */
 .page-content {
   padding: 30px 0;
-  flex: 1; }
+  flex: 1 0 auto; }
 
 .page-heading {
   font-size: 32px; }
