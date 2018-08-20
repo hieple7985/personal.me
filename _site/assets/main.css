@@ -503,3 +503,8 @@ table {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+.hle-avatar {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%; }
