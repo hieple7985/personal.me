@@ -5,7 +5,16 @@
 @import "minima";
 
 .hle-avatar {
-    height: 42px;
-    width: 42px;
-    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+}
+
+.nav-tabs {
+    margin-left: 0px;
+}
+
+.tab-content {
+    .tab-pane {
+        margin-top: 10px;
+    }
 }

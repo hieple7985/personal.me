@@ -174,7 +174,7 @@ pre {
 /**
  * Wrapper
  */
-.wrapper {
+.mini-wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
@@ -213,8 +213,9 @@ pre {
     height: 16px;
     display: inline-block;
     fill: #{$grey-color};
-    padding-right: 5px;
     vertical-align: text-top;
+    margin-right: 5px;
+    margin-top: 2px;
 }
 
 .social-media-list {
