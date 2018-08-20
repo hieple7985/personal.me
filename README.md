@@ -8,3 +8,8 @@ bundle exec jekyll serve
 bundle install
 
 http://localhost:4000/admin
+
+# Production Build Time
+JEKYLL_ENV=production jekyll build
+
+https://jekyllrb.com/docs/configuration/
