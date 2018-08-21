@@ -158,3 +158,52 @@
     }
 }
 
+#profile {
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 36px;
+        margin-top: 36px;
+    }   
+
+    #myTabContentSkills {
+        #lang {
+            text-align: left;
+            padding: 5%;
+        }
+
+        .progress {
+            margin-top: 16px;
+            height: 24px;
+            .progress-bar {
+                text-align: left;
+                // color: black;
+                padding-left: 12px;
+                height: 24px;
+            }
+            .bg-php {
+                background-color: rgb(90, 104, 165);
+            }
+            .bg-c {
+                background-color: #3F729B;
+            }
+            .bg-java {
+                background-color: #FF8800;
+            }
+            .bg-js {
+                background-color: #ffeb3b;
+                color: black;
+            }
+            .bg-html {
+                background-color: #d35400;
+            }
+            .bg-css {
+                background-color: rgb(52, 152, 219);
+            }
+        }
+    }
+
+    #myTabSkills {
+        margin-left: 0px;
+    }
+}

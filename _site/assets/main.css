@@ -618,3 +618,34 @@ table {
         left: 15px; }
       #home .right {
         left: 0%; } }
+
+#profile h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 36px;
+  margin-top: 36px; }
+#profile #myTabContentSkills #lang {
+  text-align: left;
+  padding: 5%; }
+#profile #myTabContentSkills .progress {
+  margin-top: 16px;
+  height: 24px; }
+  #profile #myTabContentSkills .progress .progress-bar {
+    text-align: left;
+    padding-left: 12px;
+    height: 24px; }
+  #profile #myTabContentSkills .progress .bg-php {
+    background-color: #5a68a5; }
+  #profile #myTabContentSkills .progress .bg-c {
+    background-color: #3F729B; }
+  #profile #myTabContentSkills .progress .bg-java {
+    background-color: #FF8800; }
+  #profile #myTabContentSkills .progress .bg-js {
+    background-color: #ffeb3b;
+    color: black; }
+  #profile #myTabContentSkills .progress .bg-html {
+    background-color: #d35400; }
+  #profile #myTabContentSkills .progress .bg-css {
+    background-color: #3498db; }
+#profile #myTabSkills {
+  margin-left: 0px; }
