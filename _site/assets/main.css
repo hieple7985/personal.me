@@ -634,6 +634,10 @@ table {
     text-align: left;
     padding-left: 12px;
     height: 24px; }
+  #profile #myTabContentSkills .progress .bg-perl {
+    background-color: #4a7ca2; }
+  #profile #myTabContentSkills .progress .bg-python {
+    background-color: #2f435c; }
   #profile #myTabContentSkills .progress .bg-php {
     background-color: #5a68a5; }
   #profile #myTabContentSkills .progress .bg-c {
