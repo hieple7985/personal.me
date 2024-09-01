@@ -16,9 +16,6 @@ export default defineNuxtConfig({
     //
   },
   runtimeConfig: {
-    // The private keys which are only available server-side
-    apiSecret: "123",
-    // Keys within public are also exposed client-side
     public: {
       FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
       FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN,
@@ -34,5 +31,8 @@ export default defineNuxtConfig({
     '~/plugins/firebase.client.ts'
   ],
 
+  // ... other configurations ...
+  ssr: false,
+  target: 'static',
   // ... other configurations ...
 })
