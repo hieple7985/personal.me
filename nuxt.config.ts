@@ -1,4 +1,4 @@
-import firebaseConfig from "./firebase.config.js";
+import { defineNuxtConfig } from 'nuxt/config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -20,25 +20,19 @@ export default defineNuxtConfig({
     apiSecret: "123",
     // Keys within public are also exposed client-side
     public: {
-      apiBase: "/api",
-    },
+      FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+      FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN,
+      FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID,
+      FIREBASE_STORAGE_BUCKET: process.env.FIREBASE_STORAGE_BUCKET,
+      FIREBASE_MESSAGING_SENDER_ID: process.env.FIREBASE_MESSAGING_SENDER_ID,
+      FIREBASE_APP_ID: process.env.FIREBASE_APP_ID,
+    }
   },
-  vite: {
-    vue: {
-      customElement: true,
-      // propsDestructure: true,
-    },
-    vueJsx: {
-      mergeProps: true,
-    },
-  },
-  webpack: {
-    loaders: {
-      vue: {
-        hotReload: true,
-      },
-    },
-  },
-  // Remove the firebase configuration from here
-  // ... existing code ...
-});
+
+  // Add the Firebase plugin
+  plugins: [
+    '~/plugins/firebase.client.ts'
+  ],
+
+  // ... other configurations ...
+})
