@@ -12,10 +12,13 @@
   },
   "dependencies": {
     "firebase": "^10.13.1",
-    "nuxt": "^3.13.0",
+    "nuxt": "3.13.0",
     "vue": "latest"
   },
   "devDependencies": {
     "@nuxt/content": "^3.7.1"
+  },
+  "resolutions": {
+    "confbox": "0.1.7"
   }
 }
