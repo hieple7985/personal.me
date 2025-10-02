@@ -19,6 +19,6 @@
     "@nuxt/content": "^3.7.1"
   },
   "resolutions": {
-    "confbox": "0.1.7"
+    "confbox": "0.2.2"
   }
 }
