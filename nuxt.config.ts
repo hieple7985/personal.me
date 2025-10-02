@@ -7,6 +7,11 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/content'],
 
+  content: {
+    // Use in-memory connector to avoid native better-sqlite3 during build in CI
+    database: { connector: 'memory' }
+  },
+
   // SPA with static hosting; enable ISR for all routes when deployed
   ssr: false,
   routeRules: {
