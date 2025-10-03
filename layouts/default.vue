@@ -2,7 +2,7 @@
   <div class="min-h-screen flex flex-col">
     <header class="border-b">
       <nav class="container mx-auto max-w-5xl flex items-center justify-between p-4">
-        <a href="/" class="font-semibold">Personal Me</a>
+        <a href="/" class="font-semibold">Hiep Le</a>
         <ul class="flex gap-4 text-sm">
           <li><a href="/blog">Blog</a></li>
           <li><a href="/guides">Guides</a></li>
