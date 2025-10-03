@@ -87,3 +87,28 @@ The project is configured with:
 - SSR: false (Single Page Application)
 - Target: static (for deployment on Firebase Hosting)
 - Plugins: firebase.client.ts
+
+## Tailwind & Typography
+
+- Installed `@nuxtjs/tailwindcss` and `@tailwindcss/typography`
+- `darkMode: 'class'` in `tailwind.config.ts`
+- Global CSS: `assets/css/tailwind.css`
+
+## Content Module
+
+- `@nuxt/content` enabled with in-memory connector to avoid native `better-sqlite3` in CI
+
+## Firebase environment variables
+
+Required variables (see `.env.example`):
+- `FIREBASE_API_KEY`
+- `FIREBASE_AUTH_DOMAIN`
+- `FIREBASE_PROJECT_ID`
+- `FIREBASE_STORAGE_BUCKET`
+- `FIREBASE_MESSAGING_SENDER_ID`
+- `FIREBASE_APP_ID`
+
+## Firebase plugin guard
+
+- If env vars are missing in development, Firebase initialization is skipped to avoid crashing the SPA
+- Initialization is wrapped in `try/catch` with console warnings/errors

@@ -62,6 +62,9 @@
 - Minimalist design, easy to read
 - Simple navigation with clear links to main sections
 - Content-focused with readable formatting
+- Dark mode toggle
+- Code highlighting (Shiki) [planned]
+- Refined typography scale [planned]
 - Integration with external platforms (GitHub, Goodreads, Google Scholar)
 
 The website serves as a comprehensive platform combining technical blogging, MLOps guides, book showcases, and learning resources about machine learning and artificial intelligence, reflecting the author's expertise and interests in computer science and writing.

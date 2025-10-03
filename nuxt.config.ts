@@ -26,7 +26,8 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Personal Me v2 — blog, guides, books, ML tools.' }
+        { name: 'description', content: 'Personal Me v2 — blog, guides, books, ML tools.' },
+        { name: 'google-site-verification', content: 'HMQMhMxR-ZaHb3Ni2Nz2lMNJAY6Yr7UDvaT5tGOasa8' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

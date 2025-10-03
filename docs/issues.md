@@ -50,3 +50,23 @@
 * Set up a testing framework and write tests
 * Implement proper security rules for Firebase services
 * Replace placeholder content with actual application content
+
+## Status Update (2025-10-03)
+
+Resolved:
+- [x] Issue-1: Firebase default index.html conflict (no public/index.html; using Nuxt generate)
+- [x] Issue-2: Nuxt configuration completed (modules, css, content, ssr=false, routeRules)
+- [x] Issue-5: Firebase initialization guard + try/catch
+- [x] Issue-7: Removed NuxtWelcome from app.vue
+
+Open:
+- [ ] Issue-3: GA measurement ID integration (optional)
+- [ ] Issue-8: Expand index.vue content
+- [ ] Issue-9: Add type definitions/usages for Firebase services
+- [ ] Issue-10: Testing setup
+
+New follow-ups:
+- [ ] Dark Mode toggle (now implementing)
+- [ ] Navigation: active state + mobile menu
+- [ ] Code highlighting with Shiki
+- [ ] Fine-tune typography scale
