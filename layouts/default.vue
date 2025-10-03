@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex flex-col">
-    <header class="p-4 border-b">
-      <nav class="container mx-auto flex items-center justify-between">
+    <header class="border-b">
+      <nav class="container mx-auto max-w-5xl flex items-center justify-between p-4">
         <a href="/" class="font-semibold">Personal Me</a>
         <ul class="flex gap-4 text-sm">
           <li><a href="/blog">Blog</a></li>
@@ -12,7 +12,7 @@
       </nav>
     </header>
 
-    <main class="container mx-auto flex-1 p-4">
+    <main class="container mx-auto max-w-5xl flex-1 p-4">
       <slot />
     </main>
 

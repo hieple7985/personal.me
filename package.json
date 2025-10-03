@@ -17,8 +17,13 @@
   },
   "devDependencies": {
     "@nuxt/content": "^3.7.1",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.4.21",
     "better-sqlite3": "^12.4.1",
-    "esbuild": "^0.25.10"
+    "esbuild": "^0.25.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
   },
   "resolutions": {
     "confbox": "0.2.2"

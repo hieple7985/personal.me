@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
 import { getStorage } from 'firebase/storage'
 
-export default defineNuxtPlugin(nuxtApp => {
+export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
 
   const firebaseConfig = {
@@ -12,21 +12,32 @@ export default defineNuxtPlugin(nuxtApp => {
     projectId: config.public.FIREBASE_PROJECT_ID,
     storageBucket: config.public.FIREBASE_STORAGE_BUCKET,
     messagingSenderId: config.public.FIREBASE_MESSAGING_SENDER_ID,
-    appId: config.public.FIREBASE_APP_ID,
+    appId: config.public.FIREBASE_APP_ID
   }
 
-  const app = initializeApp(firebaseConfig)
+  const hasAllKeys = Object.values(firebaseConfig).every(v => typeof v === 'string' && v.length > 0)
 
-  const auth = getAuth(app)
-  const firestore = getFirestore(app)
-  const storage = getStorage(app)
+  if (!hasAllKeys) {
+    // Soft-fail in development when env is missing; avoid crashing the SPA
+    if (process.dev) console.warn('[firebase] Skipping init: missing runtimeConfig public FIREBASE_*')
+    return
+  }
 
-  nuxtApp.vueApp.provide('auth', auth)
-  nuxtApp.provide('auth', auth)
+  try {
+    const app = initializeApp(firebaseConfig)
+    const auth = getAuth(app)
+    const firestore = getFirestore(app)
+    const storage = getStorage(app)
 
-  nuxtApp.vueApp.provide('firestore', firestore)
-  nuxtApp.provide('firestore', firestore)
+    nuxtApp.vueApp.provide('auth', auth)
+    nuxtApp.provide('auth', auth)
 
-  nuxtApp.vueApp.provide('storage', storage)
-  nuxtApp.provide('storage', storage)
+    nuxtApp.vueApp.provide('firestore', firestore)
+    nuxtApp.provide('firestore', firestore)
+
+    nuxtApp.vueApp.provide('storage', storage)
+    nuxtApp.provide('storage', storage)
+  } catch (e) {
+    console.error('[firebase] Initialization failed', e)
+  }
 })
