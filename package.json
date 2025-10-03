@@ -16,7 +16,9 @@
     "vue": "latest"
   },
   "devDependencies": {
-    "@nuxt/content": "^3.7.1"
+    "@nuxt/content": "^3.7.1",
+    "better-sqlite3": "^12.4.1",
+    "esbuild": "^0.25.10"
   },
   "resolutions": {
     "confbox": "0.2.2"
