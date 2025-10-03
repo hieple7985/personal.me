@@ -1,17 +1,15 @@
 <template>
-  <section>
-    <h1>Blog</h1>
+  <section class="container mx-auto max-w-5xl p-4">
+    <h1 class="text-2xl font-semibold mb-4">Blog</h1>
     <ContentList path="/blog" v-slot="{ list }">
-      <ul>
-        <li v-for="post in list" :key="post._path">
-          <NuxtLink :to="post._path">{{ post.title || post._path }}</NuxtLink>
-        </li>
-      </ul>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <ContentCard v-for="post in list" :key="post._path" :item="post" />
+      </div>
     </ContentList>
   </section>
 </template>
 
 <script setup lang="ts">
-// Blog list powered by @nuxt/content
+import ContentCard from '@/components/ContentCard.vue'
 </script>
 
