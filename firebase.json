@@ -1,21 +1,12 @@
 {
-  "hosting": {
-    "public": ".output/public",
-    "site": "personal-me-v2",
-    "rewrites": [
-      {
-        "source": "**/*",
-        "destination": "/index.html"
-      },
-      {
-        "source": "**/api/**",
-        "destination": "/index.html"
-      }
-    ]
+  "functions": {
+    "source": "functions"
   },
-  "emulators": {
-    "hosting": {
-      "public": ".output/public"
-    }
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }

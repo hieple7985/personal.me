@@ -3,5 +3,21 @@
   "outputDirectory": ".output/public",
   "devCommand": "yarn dev",
   "installCommand": "yarn install",
-  "framework": "nuxt"
+  "framework": "nuxt",
+  "crons": [],
+  "functions": {},
+  "regions": ["sin1"],
+  "cleanUrls": true,
+  "trailingSlash": false,
+  " headers": [
+    {
+      "source": "/_nuxt/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
 }
