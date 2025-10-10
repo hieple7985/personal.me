@@ -8,7 +8,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "nuxt generate && firebase deploy --only hosting"
+    "deploy": "./scripts/deploy.sh",
+    "deploy:staging": "npx vercel --confirm",
+    "deploy:prod": "npx vercel --prod --confirm"
   },
   "dependencies": {
     "firebase": "^10.13.1",
