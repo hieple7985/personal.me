@@ -1,0 +1,7 @@
+{
+  "buildCommand": "yarn generate",
+  "outputDirectory": ".output/public",
+  "devCommand": "yarn dev",
+  "installCommand": "yarn install",
+  "framework": "nuxt"
+}

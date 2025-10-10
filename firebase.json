@@ -1,1 +1,21 @@
-{"hosting":{"public":".output/public"}}
+{
+  "hosting": {
+    "public": ".output/public",
+    "site": "personal-me-v2",
+    "rewrites": [
+      {
+        "source": "**/*",
+        "destination": "/index.html"
+      },
+      {
+        "source": "**/api/**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "public": ".output/public"
+    }
+  }
+}
