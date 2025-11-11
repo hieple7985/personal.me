@@ -19,7 +19,10 @@ export default defineNuxtConfig({
     '/**': { isr: true }
   },
 
+  // GitHub Pages configuration
   app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/personal.me/' : '/',
+    buildAssetsDir: '/_nuxt/',
     head: {
       titleTemplate: '%s · Personal Me',
       htmlAttrs: { lang: 'en' },
