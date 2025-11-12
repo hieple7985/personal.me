@@ -10,6 +10,15 @@
         <ul class="flex gap-6 text-sm text-neutral-700 dark:text-neutral-300">
           <li>
             <NuxtLink 
+              to="/about" 
+              class="hover:text-black dark:hover:text-white transition-colors font-medium"
+              active-class="text-blue-600 dark:text-blue-400"
+            >
+              About
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink 
               to="/blog" 
               class="hover:text-black dark:hover:text-white transition-colors font-medium"
               active-class="text-blue-600 dark:text-blue-400"
@@ -99,6 +108,16 @@
           </div>
           
           <ul class="flex flex-col gap-4 text-sm">
+            <li>
+              <NuxtLink 
+                to="/about" 
+                class="block py-2 text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors font-medium"
+                active-class="text-blue-600 dark:text-blue-400"
+                @click="closeMobileMenu"
+              >
+                👤 About
+              </NuxtLink>
+            </li>
             <li>
               <NuxtLink 
                 to="/blog" 

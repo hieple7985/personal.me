@@ -33,6 +33,7 @@ export default defineNuxtConfig({
         { name: 'google-site-verification', content: 'HMQMhMxR-ZaHb3Ni2Nz2lMNJAY6Yr7UDvaT5tGOasa8' }
       ],
       link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }

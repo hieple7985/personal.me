@@ -4,6 +4,26 @@
 
 @layer base {
   html { color-scheme: light dark; }
+  
+  /* Blueprint background pattern */
+  body {
+    background-color: #0d47a1;
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 
+      100px 100px,
+      100px 100px,
+      20px 20px,
+      20px 20px;
+    background-position: 
+      -1px -1px,
+      -1px -1px,
+      -1px -1px,
+      -1px -1px;
+  }
 }
 
 /* Custom animations */

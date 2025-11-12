@@ -1,15 +1,20 @@
 <template>
-  <section class="container mx-auto max-w-5xl p-4">
-    <h1 class="text-2xl font-semibold mb-4">Blog</h1>
-    <ContentList path="/blog" v-slot="{ list }">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <ContentCard v-for="post in list" :key="post._path" :item="post" />
-      </div>
-    </ContentList>
-  </section>
+  <div>
+    <ComingSoon 
+      title="Blog"
+      message="Technical articles, tutorials, and thoughts on software development and machine learning. Stay tuned for exciting content!"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
-import ContentCard from '@/components/ContentCard.vue'
+import ComingSoon from '@/components/ComingSoon.vue'
+
+useHead({
+  title: 'Blog',
+  meta: [
+    { name: 'description', content: 'Technical blog posts about software development and machine learning' }
+  ]
+})
 </script>
 

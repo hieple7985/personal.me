@@ -1,9 +1,11 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
+  <div class="min-h-screen flex flex-col">
     <HeaderNav />
 
     <main class="container mx-auto max-w-5xl flex-1 p-4">
-      <slot />
+      <div class="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 rounded-lg shadow-xl p-6 backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95">
+        <slot />
+      </div>
     </main>
 
     <SiteFooter />
