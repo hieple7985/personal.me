@@ -13,8 +13,8 @@
     "deploy:prod": "npx vercel --prod --confirm"
   },
   "dependencies": {
-    "firebase": "^10.13.1",
-    "nuxt": "3.13.0",
+    "firebase": "^12.5.0",
+    "nuxt": "^3.17.5",
     "vue": "latest"
   },
   "devDependencies": {
