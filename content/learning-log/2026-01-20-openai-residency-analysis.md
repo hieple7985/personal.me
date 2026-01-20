@@ -1,6 +1,6 @@
 ---
-title: "Day 1: OpenAI Residency Research"
-description: "Analyzing OpenAI Residency program and creating preparation strategy"
+title: "Day 20: OpenAI Residency Research + Catch-up Plan"
+description: "Analyzing OpenAI Residency program and creating preparation strategy. Starting Jan 1 = Day 1, currently 20 days behind."
 date: 2026-01-20
 tags: ['openai', 'residency', 'preparation']
 ---
@@ -38,6 +38,23 @@ Preparing for OpenAI Residency application - a 6-month program for brilliant tec
 3. **Ship Weekly** - Small but complete projects
 4. **Research Instincts** - Read papers, question assumptions
 
+## Current Status: 🔴 CATCH UP MODE
+
+**Overdue:** 3 weeks (20 days)
+**Missed:** ~45 hours of study time
+
+### This Week (Jan 20-25) - ACCELERATED
+
+| Day | Plan | Hours |
+|-----|------|-------|
+| Tue Jan 21 | 3B1B Ch 1-4 (double speed) | 4h |
+| Wed Jan 22 | 3B1B Ch 5-7 + NumPy | 4h |
+| Thu Jan 23 | 3B1B Ch 8-10 | 4h |
+| Fri Jan 24 | Practice problems | 3h |
+| Sat Jan 25 | SVD + review | 4h |
+
+**Total:** 19h (vs normal 15h) - **Must clear all LA overdue!**
+
 ## Next Steps
 
 - [ ] Complete Linear Algebra review (3Blue1Brown)
@@ -51,12 +68,27 @@ Preparing for OpenAI Residency application - a 6-month program for brilliant tec
 - [3Blue1Brown Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra)
 - [Harvard STAT 110](https://projects.iq.harvard.edu/stat110/youtube)
 
-## Timeline
+## Timeline (Jan 1 = Day 1)
 
-- **M1 (Jan 20 - Feb 22):** Fundamentals (LA, Probability)
-- **M2 (Feb 23 - Mar 29):** ML Foundation (Optimization, Neural Networks)
-- **M3 (Mar 30 - May 3):** Deep Dive (Transformers, Research Papers)
-- **M4 (May 4 - Jun 7):** Projects + Application
+| Week | Dates | Topic | Status |
+|------|-------|-------|--------|
+| 1 | Jan 1-4 | LA Basics | ❌ OVERDUE |
+| 2 | Jan 6-11 | Matrices | ❌ OVERDUE |
+| 3 | Jan 13-18 | Advanced LA | ❌ OVERDUE |
+| 4 | Jan 20-25 | Eigenvalues/SVD + CATCH UP | 🔄 NOW |
+| 5 | Jan 27-Feb 1 | Probability 1 | ⏳ |
+| 6 | Feb 3-8 | Probability 2 | ⏳ |
+| 7 | Feb 10-15 | Optimization | ⏳ |
+| 8 | Feb 17-22 | ML Basics 1 | ⏳ |
+| 9 | Feb 24-Mar 1 | ML Basics 2 | ⏳ |
+| 10 | Mar 3-8 | Transformers | ⏳ |
+| 11-12 | Mar 10-22 | Research Papers | ⏳ |
+| 13-15 | Mar 24-Apr 12 | Portfolio Projects | ⏳ |
+| 16 | Apr 14-19 | Application | ⏳ |
+
+**Target Application:** Late April 2026
+
+### Schedule: Tue-Sat, 2-4h/day (~15h/week)
 
 ---
 
