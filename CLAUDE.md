@@ -1,90 +1,76 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Personal website built with **Nuxt 3** (Vue 3) static SPA, deployed to Vercel. Uses Nuxt Content for blog, guides, books, ML tools.
 
-## Project Overview
+**Production**: https://personalme-murex.vercel.app
 
-Personal website built with **Nuxt 3** (Vue 3) as a static SPA, deployed to Vercel. Uses Nuxt Content for managing blog posts, guides, books, and ML tools content.
-
-**Production URL**: https://personal-me-v2.web.app/ (Firebase)
-**Vercel**: https://personalme-murex.vercel.app
-
-## Development Commands
+## Dev Commands
 
 ```bash
-# Install dependencies
-npm ci
-
-# Start dev server (http://localhost:3001)
-npm run dev
-```
-
-# Build for production
-yarn build
-
-# Preview production build locally
-yarn preview
-
-# Generate static site
-yarn generate
-
-# Deploy to Vercel (production)
-yarn deploy
-# or
-npm run deploy:prod
+npm ci                  # Install deps
+npm run dev             # Dev at http://localhost:3001
+yarn generate           # Static build
+yarn deploy             # Build + vercel --prod
 ```
 
 ## Architecture
 
-### Nuxt Configuration (`nuxt.config.ts`)
-- **SSR disabled**: SPA mode (`ssr: false`)
-- **Static target**: Static deployment to Vercel
-- **ISR enabled**: All routes use Incremental Static Regeneration
-- **Dev server**: Port 3001
-- **Modules**: `@nuxt/content`, `@nuxtjs/tailwindcss`
+- `ssr: false`, static SPA, ISR on all routes
+- Port 3001, modules: `@nuxt/content`, `@nuxtjs/tailwindcss`
+- Content in `content/{blog,guides,books,tools}/` as Markdown
+- Search: `queryContent()` with debounce
+- Design: Modern Dark — indigo `#6366F1`, zinc-950 bg, Inter font, `darkMode: 'class'`
 
-### Content Management with @nuxt/content
+### Layout
 
-Content is stored as Markdown files in `content/`:
-- `content/blog/` — Blog posts
-- `content/guides/` — MLOps guides (supports nested segments via `[...segments].vue`)
-- `content/books/` — Book reviews and recommendations
-- `content/tools/` — ML tools landscape
-
-Content is rendered using the `<ContentDoc />` component in dynamic route pages. The search functionality (`SearchBox.vue`) queries across all content collections using `queryContent()` with debounced input.
-
-### Styling
-
-- **Tailwind CSS** with `darkMode: 'class'`
-- **@tailwindcss/typography** plugin for prose styling
-- Custom animations defined in `tailwind.config.ts`
-- Dark mode toggle in `HeaderNav.vue` using localStorage and `prefers-color-scheme`
-
-### Layout Structure
-
-All pages use `layouts/default.vue` which wraps content with:
-- `HeaderNav` — Sticky navigation with search, dark mode toggle, mobile menu
-- Main content area with centered container
-- `SiteFooter`
+`layouts/default.vue` wraps: `HeaderNav` (sticky, search, dark toggle, mobile menu) → main → `SiteFooter`
 
 ### Page Routes
 
-- `/` — Homepage
-- `/about` — About page
-- `/blog` — Blog index (`/blog/[slug].vue` for individual posts)
-- `/guides` — Guides index (`/guides/[...segments].vue` for nested sections)
-- `/books` — Books page
-- `/tools` — ML Tools landscape
+| Route | File | Description |
+|-------|------|-------------|
+| `/` | `pages/index.vue` | Homepage = CV: bio, experience, projects, skills, connect |
+| `/about` | `pages/about.vue` | Redirects to `/` |
+| `/blog` | `pages/blog/index.vue`, `blog/[slug].vue` | Blog posts |
+| `/guides` | `pages/guides/index.vue`, `guides/[...segments].vue` | Guides |
+| `/books` | `pages/books/index.vue` | Books |
+| `/tools` | `pages/tools/index.vue` | ML tools |
+
+### Homepage Sections (`pages/index.vue`)
+
+Data-driven arrays in `<script setup>`:
+- `experience` — 4 jobs (TDT, BBS, Laboon.org, First Telecom)
+- `projects` — 8 projects: BBS ERP, BBQ FoodTech, Trading Platform, Blockchain/Web3, Forex CMS, Bitcoin Payment, Kaggle ML, Manga Reader
+- `skills` — ~20 skills (Java, Python, React, etc.)
+
+### Favicon Set
+
+Modern Dark style — indigo "H" on zinc-950 bg:
+`favicon.svg`, `.ico`, `-16x16.png`, `-32x32.png`, `-48x48.png`, `apple-touch-icon.png`, `android-chrome-{192,512}x512.png`, `site.webmanifest`
 
 ## Deployment
 
-### Vercel (Primary)
-The `deploy` script runs `scripts/deploy.sh` which:
-1. Runs `yarn generate` to build the static site
-2. Deploys to Vercel production via `npx vercel --prod`
+- Vercel CLI (`vercel --yes --prod`)
+- Vercel account: `hle`
+- Custom domain coming soon
+- Firebase removed entirely (was `personal-me-v2.web.app`)
+  - Must manually delete Firebase site at https://console.firebase.google.com
 
-## Important Notes
+## History (this session)
 
-- Content database uses in-memory connector to avoid native `better-sqlite3` issues in CI
-- Search functionality is client-side and queries the Nuxt Content database
-- Design: Modern Dark style with indigo accents (#6366F1), zinc-950 background, Inter font
+1. Closed 21 stale issues
+2. GitHub Pages setup deleted (private repo)
+3. Vercel config fixed: framework `nuxtjs`, removed empty arrays
+4. Modern Dark redesign across all pages
+5. Removed ComingSoon, listed actual content
+6. Homepage = CV (avatar from Kaggle, bio, experience, skills, connect)
+7. `/about` redirects to `/`, "About" link removed from nav
+8. Firebase deleted: plugin, config, deps, deploy script, docs
+9. Favicon set generated (SVG + PNGs + ICO + manifest)
+10. Projects section added (8 projects from CV/LinkedIn/GitHub)
+
+## Key Patterns
+
+- Always `v-if="data && data.length"` (never `v-if="data.length"`)
+- Content queries: `queryContent('/blog').find()`
+- In-memory DB connector to avoid `better-sqlite3` issues in CI
