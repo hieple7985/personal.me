@@ -35,6 +35,18 @@
     </section>
 
     <section class="pb-12 border-t border-zinc-800/50 pt-8">
+      <h2 class="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-6">Projects</h2>
+
+      <div v-for="(project, i) in projects" :key="i" class="mb-6 last:mb-0">
+        <h3 class="text-white font-medium mb-1">{{ project.name }}</h3>
+        <p class="text-zinc-500 text-sm leading-relaxed mb-2">{{ project.description }}</p>
+        <div class="flex flex-wrap gap-1.5">
+          <span v-for="tag in project.tags" class="px-2 py-0.5 rounded text-xs bg-zinc-900 text-zinc-500 border border-zinc-800/50">{{ tag }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-12 border-t border-zinc-800/50 pt-8">
       <h2 class="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-6">Skills</h2>
       <div class="flex flex-wrap gap-2">
         <span v-for="skill in skills" :key="skill" class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-sm text-zinc-400">
@@ -107,6 +119,49 @@ const experience = [
     company: 'First Telecom GmbH, Germany',
     period: '2017 - 2022',
     description: 'Designed and maintained complex applications including Bitcoin Payment App, billing systems, and integrated management platforms (CPF, Voice App, CCQ). Full-stack with Java, PHP, JavaScript, PostgreSQL.'
+  }
+]
+
+const projects = [
+  {
+    name: 'BBS ERP & Retail Management',
+    description: 'Centralized ERP system integrating retail, supply chain, and warehouse management across 50+ offices. Optimized SQL performance by 30%, unified CRM, POS, and inventory modules.',
+    tags: ['ERP', 'Java', 'PostgreSQL', 'CRM', 'POS']
+  },
+  {
+    name: 'BBQ FoodTech Platform',
+    description: 'Full-suite F&B management platform including POS, CRM, shipment & delivery, and inventory tracking for food retail chains.',
+    tags: ['FoodTech', 'POS', 'CRM', 'Logistics']
+  },
+  {
+    name: 'Multi-Market Mobile Trading Platform',
+    description: 'Large-scale mobile trading platform serving multiple markets (SG, HK, JB, AU). Led QA automation workstream and drove AI agent adoption for engineering productivity.',
+    tags: ['Fintech', 'Mobile', 'QA Automation', 'AI Agents']
+  },
+  {
+    name: 'Blockchain & Web3 Products',
+    description: 'Built and contributed to blockchain products including decentralized exchanges, NFT platforms, DAO curation tools, and smart contract auditing (Immunefi). Products reached 100K+ downloads.',
+    tags: ['Blockchain', 'Web3', 'DeFi', 'Smart Contracts']
+  },
+  {
+    name: 'Forex Broker & CMS Platform',
+    description: 'Built forex broker systems and CMS platforms for Japanese financial clients, including trading chart engines, reporting tools, and automation systems.',
+    tags: ['Forex', 'Finance', 'Java', 'TradingView']
+  },
+  {
+    name: 'Bitcoin Payment & Billing Systems',
+    description: 'Designed Bitcoin Payment App, CPF billing engine, voice application platform, and call center queue management for European telecom clients.',
+    tags: ['Bitcoin', 'Telecom', 'Java', 'PHP', 'Billing']
+  },
+  {
+    name: 'Kaggle ML & AI Projects',
+    description: 'Experimenting with lottery prediction systems, AI agents, computer vision, and automated video generation. Active Kaggle contributor exploring ML applications.',
+    tags: ['Machine Learning', 'Python', 'Kaggle', 'AI']
+  },
+  {
+    name: 'Manga Mobile Reader',
+    description: 'Cross-platform manga/comic reader mobile application for the Japanese market.',
+    tags: ['Mobile', 'Android', 'iOS', 'Manga']
   }
 ]
 
