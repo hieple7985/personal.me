@@ -29,6 +29,12 @@
       "@@/*": [
         "../*"
       ],
+      "nitropack/types": [
+        "../node_modules/nitropack/types"
+      ],
+      "nitropack/runtime": [
+        "../node_modules/nitropack/runtime"
+      ],
       "nitropack": [
         "../node_modules/nitropack"
       ],
@@ -71,20 +77,14 @@
       "nuxt": [
         "../node_modules/nuxt"
       ],
-      "#internal/nuxt/paths": [
-        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
+      "vite/client": [
+        "../node_modules/vite/client"
       ],
-      "~": [
-        "./.."
+      "#shared": [
+        "../shared"
       ],
-      "@": [
-        "./.."
-      ],
-      "~~": [
-        "./.."
-      ],
-      "@@": [
-        "./.."
+      "#shared/*": [
+        "../shared/*"
       ],
       "assets": [
         "../assets"
@@ -97,6 +97,15 @@
       ],
       "public/*": [
         "../public/*"
+      ],
+      "#build": [
+        "./"
+      ],
+      "#build/*": [
+        "./*"
+      ],
+      "#internal/nuxt/paths": [
+        "../node_modules/@nuxt/nitro-server/dist/runtime/utils/paths"
       ],
       "#content/components": [
         "./content/components"
@@ -113,8 +122,8 @@
       "#mdc-imports": [
         "./mdc-imports"
       ],
-      "#vue-router": [
-        "./vue-router"
+      "#unhead/composables": [
+        "../node_modules/nuxt/dist/head/runtime/composables/v3"
       ],
       "#content/dump": [
         "./content/database.compressed"
@@ -135,11 +144,9 @@
   "include": [
     "./content/types.d.ts",
     "./types/nitro-nuxt.d.ts",
-    "../node_modules/@nuxtjs/mdc/runtime/server",
-    "../node_modules/@nuxt/content/runtime/server",
-    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
-    "../node_modules/@nuxt/devtools/runtime/server",
-    "../node_modules/@nuxt/telemetry/runtime/server",
+    "../node_modules/runtime/server",
+    "../node_modules/dist/runtime/server",
+    "../shared/**/*.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
@@ -148,6 +155,10 @@
     "../node_modules",
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxtjs/mdc/node_modules",
+    "../node_modules/@nuxt/content/node_modules",
+    "../node_modules/@nuxtjs/tailwindcss/node_modules",
+    "../node_modules/@nuxt/devtools/node_modules",
+    "../node_modules/@nuxt/telemetry/node_modules",
     "../dist"
   ]
 }

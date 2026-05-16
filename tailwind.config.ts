@@ -11,10 +11,13 @@ export default <Config>{
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif']
+      },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
         'slide-up': 'slideUp 0.6s ease-out forwards',
-        'bounce-slow': 'bounce 3s infinite'
+        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
       },
       keyframes: {
         fadeIn: {
@@ -25,9 +28,21 @@ export default <Config>{
           '0%': { opacity: '0', transform: 'translateY(40px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' }
         }
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            '--tw-prose-body': 'rgb(228, 228, 231)',
+            '--tw-prose-headings': 'rgb(255, 255, 255)',
+            '--tw-prose-links': 'rgb(99, 102, 241)',
+            '--tw-prose-bold': 'rgb(255, 255, 255)',
+            '--tw-prose-code': 'rgb(167, 139, 250)',
+            '--tw-prose-pre-bg': 'rgb(24, 24, 27)',
+            maxWidth: 'none'
+          }
+        }
       }
     }
   },
   plugins: [require('@tailwindcss/typography')]
 }
-

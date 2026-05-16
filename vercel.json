@@ -3,13 +3,11 @@
   "outputDirectory": ".output/public",
   "devCommand": "yarn dev",
   "installCommand": "yarn install",
-  "framework": "nuxt",
-  "crons": [],
-  "functions": {},
+  "framework": "nuxtjs",
   "regions": ["sin1"],
   "cleanUrls": true,
   "trailingSlash": false,
-  " headers": [
+  "headers": [
     {
       "source": "/_nuxt/(.*)",
       "headers": [

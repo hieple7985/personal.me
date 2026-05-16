@@ -1,11 +1,9 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col bg-zinc-950">
     <HeaderNav />
 
-    <main class="container mx-auto max-w-5xl flex-1 p-4">
-      <div class="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 rounded-lg shadow-xl p-6 backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95">
-        <slot />
-      </div>
+    <main class="flex-1 max-w-5xl mx-auto w-full px-6 py-12">
+      <slot />
     </main>
 
     <SiteFooter />
@@ -13,7 +11,4 @@
 </template>
 
 <script setup lang="ts">
-// Default layout shell for the new site structure.
-// NOTE: Tailwind classes are present but optional; styling can be refined later.
 </script>
-

@@ -1,20 +1,43 @@
 <template>
   <div>
-    <ComingSoon 
-      title="Guides"
-      message="Step-by-step guides and tutorials on various tech topics. Coming soon!"
-    />
+    <section class="py-12 border-b border-zinc-800/50">
+      <h1 class="text-4xl font-bold text-white mb-4">Guides</h1>
+      <p class="text-zinc-400">Step-by-step tutorials and documentation</p>
+    </section>
+
+    <section class="py-8">
+      <div v-if="guides && guides.length" class="space-y-6">
+        <NuxtLink
+          v-for="guide in guides"
+          :key="guide._path"
+          :to="guide._path"
+          class="block group py-6 border-b border-zinc-800/50 last:border-0"
+        >
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-xl font-medium text-white group-hover:text-indigo-400 transition-colors mb-2">
+                {{ guide.title }}
+              </h3>
+              <p v-if="guide.description" class="text-zinc-500 mb-3">{{ guide.description }}</p>
+            </div>
+            <svg class="w-5 h-5 text-zinc-600 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </div>
+        </NuxtLink>
+      </div>
+      <p v-else class="py-12 text-center text-zinc-500">No guides yet.</p>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
-import ComingSoon from '@/components/ComingSoon.vue'
-
 useHead({
   title: 'Guides',
-  meta: [
-    { name: 'description', content: 'Technical guides and tutorials' }
-  ]
+  meta: [{ name: 'description', content: 'Technical guides and tutorials' }]
 })
-</script>
 
+const { data: guides } = await useAsyncData('guides', () =>
+  queryContent('/guides').find()
+)
+</script>

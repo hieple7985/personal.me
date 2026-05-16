@@ -48,3 +48,4 @@ sw.*
 
 # Nuxt build
 .nuxt/
+.vercel
