@@ -47,6 +47,15 @@
     </section>
 
     <section class="pb-12 border-t border-zinc-800/50 pt-8">
+      <h2 class="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-6">Education</h2>
+      <div v-for="(edu, i) in education" :key="i" class="mb-6 last:mb-0">
+        <h3 class="text-white font-medium">{{ edu.degree }}</h3>
+        <p class="text-indigo-400 text-sm">{{ edu.school }}</p>
+        <p class="text-zinc-600 text-sm">{{ edu.period }}</p>
+      </div>
+    </section>
+
+    <section class="pb-12 border-t border-zinc-800/50 pt-8">
       <h2 class="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-6">Skills</h2>
       <div class="flex flex-wrap gap-2">
         <span v-for="skill in skills" :key="skill" class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-sm text-zinc-400">
@@ -162,6 +171,14 @@ const projects = [
     name: 'Manga Mobile Reader',
     description: 'Cross-platform manga/comic reader mobile application for the Japanese market.',
     tags: ['Mobile', 'Android', 'iOS', 'Manga']
+  }
+]
+
+const education = [
+  {
+    degree: 'BSc in Information Technology',
+    school: 'University of Greenwich (UK)',
+    period: '2009 - 2010'
   }
 ]
 
