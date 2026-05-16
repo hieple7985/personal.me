@@ -12,10 +12,11 @@ Personal website built with **Nuxt 3** (Vue 3) as a static SPA, deployed to Fire
 
 ```bash
 # Install dependencies
-yarn install
+npm ci
 
-# Start dev server (http://localhost:3000)
-yarn dev --open
+# Start dev server (http://localhost:3001)
+npm run dev
+```
 
 # Build for production
 yarn build
@@ -38,7 +39,7 @@ npm run deploy:prod
 - **SSR disabled**: SPA mode (`ssr: false`)
 - **Static target**: For Firebase Hosting deployment
 - **ISR enabled**: All routes use Incremental Static Regeneration
-- **Base URL**: Set to `/personal.me/` in production for GitHub Pages compatibility
+- **Dev server**: Port 3001
 - **Modules**: `@nuxt/content`, `@nuxtjs/tailwindcss`
 
 ### Firebase Integration
@@ -105,7 +106,7 @@ firebase deploy --only hosting
 
 ## Important Notes
 
-- The site uses **GitHub Pages base path** (`/personal.me/`) in production
 - Content database uses in-memory connector to avoid native `better-sqlite3` issues in CI
 - All client-side plugins use `.client.ts` suffix to ensure they only run in the browser
 - Search functionality is client-side and queries the Nuxt Content database
+- Design: Modern Dark style with indigo accents (#6366F1), zinc-950 background, Inter font
