@@ -74,7 +74,6 @@ const colorMode = useState<'light' | 'dark'>('color-mode', () => 'dark')
 const isMobileMenuOpen = ref(false)
 
 const navItems = [
-  { label: 'About', path: '/about' },
   { label: 'Blog', path: '/blog' },
   { label: 'Guides', path: '/guides' },
   { label: 'Books', path: '/books' },
