@@ -54,7 +54,7 @@
     <section class="py-16 border-t border-zinc-800/50">
       <h2 class="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-8">Recent</h2>
 
-      <div v-if="recentPosts.length" class="space-y-4">
+      <div v-if="recentPosts && recentPosts.length" class="space-y-4">
         <NuxtLink
           v-for="post in recentPosts"
           :key="post._path"
