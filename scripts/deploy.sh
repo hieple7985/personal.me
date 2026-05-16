@@ -24,8 +24,6 @@ if [ ! -z "$PROD_URL" ]; then
     echo "🎉 Deploy successful!"
     echo "🌐 Production URL: $PROD_URL"
     echo ""
-    echo "📊 Firebase Analytics: https://console.firebase.google.com/project/personal-me-v2/analytics"
-    echo ""
     
     # Add to deployment history
     echo "$(date): $PROD_URL" >> deployment-history.log

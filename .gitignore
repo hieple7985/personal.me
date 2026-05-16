@@ -25,12 +25,6 @@ pnpm-debug.log*
 # Local env files
 .env
 
-# Firebase
-.firebase/
-.firebaserc
-firebase-debug.log*
-firebase-debug.*.log*
-
 # Editor directories and files
 .idea
 .vscode

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal website built with **Nuxt 3** (Vue 3) as a static SPA, deployed to Firebase Hosting and Vercel. Uses Firebase for backend services (Auth, Firestore, Storage) and Nuxt Content for managing blog posts, guides, books, and ML tools content.
+Personal website built with **Nuxt 3** (Vue 3) as a static SPA, deployed to Vercel. Uses Nuxt Content for managing blog posts, guides, books, and ML tools content.
 
 **Production URL**: https://personal-me-v2.web.app/ (Firebase)
 **Vercel**: https://personalme-murex.vercel.app
@@ -38,26 +38,10 @@ npm run deploy:prod
 
 ### Nuxt Configuration (`nuxt.config.ts`)
 - **SSR disabled**: SPA mode (`ssr: false`)
-- **Static target**: For Firebase Hosting deployment
+- **Static target**: Static deployment to Vercel
 - **ISR enabled**: All routes use Incremental Static Regeneration
 - **Dev server**: Port 3001
 - **Modules**: `@nuxt/content`, `@nuxtjs/tailwindcss`
-
-### Firebase Integration
-
-Firebase services are initialized in `plugins/firebase.client.ts` and provided globally via Nuxt's plugin system:
-
-```ts
-const { $auth, $firestore, $storage } = useNuxtApp()
-```
-
-The plugin soft-fails in development if environment variables are missing (logs warning instead of crashing). Environment variables are defined in `runtimeConfig.public` and read from `.env`:
-- `FIREBASE_API_KEY`
-- `FIREBASE_AUTH_DOMAIN`
-- `FIREBASE_PROJECT_ID`
-- `FIREBASE_STORAGE_BUCKET`
-- `FIREBASE_MESSAGING_SENDER_ID`
-- `FIREBASE_APP_ID`
 
 ### Content Management with @nuxt/content
 
@@ -99,15 +83,8 @@ The `deploy` script runs `scripts/deploy.sh` which:
 1. Runs `yarn generate` to build the static site
 2. Deploys to Vercel production via `npx vercel --prod`
 
-### Firebase Hosting
-Alternative deployment to Firebase Hosting (configured in `firebase.json`):
-```bash
-firebase deploy --only hosting
-```
-
 ## Important Notes
 
 - Content database uses in-memory connector to avoid native `better-sqlite3` issues in CI
-- All client-side plugins use `.client.ts` suffix to ensure they only run in the browser
 - Search functionality is client-side and queries the Nuxt Content database
 - Design: Modern Dark style with indigo accents (#6366F1), zinc-950 background, Inter font
