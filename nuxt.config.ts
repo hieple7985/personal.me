@@ -3,6 +3,9 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  devServer: {
+    port: 3001
+  },
 
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
   css: ['~/assets/css/tailwind.css'],
