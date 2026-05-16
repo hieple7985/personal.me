@@ -1,9 +1,12 @@
 <template>
   <div class="max-w-3xl mx-auto">
-    <section class="pb-12">
-      <h1 class="text-4xl font-bold text-white mb-2">Hiep Le</h1>
-      <p class="text-zinc-400">Sr. Technical Manager &amp; Solution Architect</p>
-      <p class="text-zinc-600 text-sm mt-1">Vietnam</p>
+    <section class="flex flex-col md:flex-row items-start gap-8 pb-12">
+      <img src="/avatar.png" alt="Hiep Le" class="w-20 h-20 rounded-full shrink-0" />
+      <div>
+        <h1 class="text-4xl font-bold text-white mb-2">Hiep Le</h1>
+        <p class="text-zinc-400">Sr. Technical Manager &amp; Solution Architect</p>
+        <p class="text-zinc-600 text-sm mt-1">Vietnam</p>
+      </div>
     </section>
 
     <section class="pb-12 border-t border-zinc-800/50 pt-8">

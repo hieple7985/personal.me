@@ -6,7 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal website built with **Nuxt 3** (Vue 3) as a static SPA, deployed to Firebase Hosting and Vercel. Uses Firebase for backend services (Auth, Firestore, Storage) and Nuxt Content for managing blog posts, guides, books, and ML tools content.
 
-**Production URL**: https://personal-me-v2.web.app/
+**Production URL**: https://personal-me-v2.web.app/ (Firebase)
+**Vercel**: https://personalme-murex.vercel.app
 
 ## Development Commands
 

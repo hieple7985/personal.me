@@ -1,9 +1,10 @@
 # Personal Me v2 — Nuxt 3 + Firebase
 
-> Website cá nhân xây dựng bằng Nuxt 3 (Vue 3), build tĩnh và triển khai trên Firebase Hosting. Ứng dụng dùng Firebase Authentication, Firestore và Storage qua plugin client.
+> Website cá nhân xây dựng bằng Nuxt 3 (Vue 3), build tĩnh và triển khai trên Vercel + Firebase Hosting.
 
 ## 🔗 Sản phẩm (Production)
-- https://personal-me-v2.web.app/
+- https://personal-me-v2.web.app/ (Firebase Hosting)
+- https://personalme-murex.vercel.app (Vercel)
 
 ## 🧭 Tổng quan
 - SPA (ssr: false), target: `static` để dễ dàng deploy lên Firebase Hosting
