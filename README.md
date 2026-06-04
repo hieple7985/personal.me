@@ -3,7 +3,7 @@
 > A professional minimalist portfolio documenting a 20-year journey through IT evolution.
 
 ## 🔗 Live Site
-- **Production**: [https://hieple7985.github.io/](https://hieple7985.github.io/)
+- **Production**: [https://hieple7985.github.io/personal.me/](https://hieple7985.github.io/personal.me/)
 
 ## 🧭 Overview
 - **Framework**: Nuxt 3 (Static Site Generation)

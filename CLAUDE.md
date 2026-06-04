@@ -2,7 +2,7 @@
 
 Professional portfolio website built with **Nuxt 3** (Vue 3) static generation, deployed to **GitHub Pages**.
 
-**Production**: https://hieple7985.github.io/
+**Production**: https://hieple7985.github.io/personal.me/
 
 ## Dev Commands
 
