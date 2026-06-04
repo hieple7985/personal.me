@@ -21,11 +21,11 @@ export default defineNuxtConfig({
   },
 
   ssr: false,
-  routeRules: {
-    '/**': { isr: true }
+  nitro: {
+    preset: 'github-pages'
   },
-
   app: {
+    baseURL: '/', // Set to '/personal.me/' if not using a custom domain or root repo
     buildAssetsDir: '/_nuxt/',
     head: {
       titleTemplate: '%s · Hiep Le',
