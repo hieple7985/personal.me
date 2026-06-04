@@ -8,10 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "vitest",
-    "deploy": "./scripts/deploy.sh",
-    "deploy:staging": "npx vercel --confirm",
-    "deploy:prod": "npx vercel --prod --confirm"
+    "test": "vitest"
   },
   "dependencies": {
     "nuxt": "^3.17.5",
