@@ -18,11 +18,11 @@
         </p>
       </div>
 
-      <div class="flex items-center gap-6">
-        <img src="/avatar.png" alt="Hiep Le" class="w-16 h-16 rounded-2xl border border-zinc-200 dark:border-zinc-800 object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-sm" />
+      <div class="flex items-center gap-8">
+        <img src="/avatar-new.webp" alt="Hiep Le" class="w-32 h-32 rounded-3xl border border-zinc-200 dark:border-zinc-800 object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-sm" />
         <div>
-          <h2 class="font-bold text-zinc-900 dark:text-white">Hiep Le</h2>
-          <p class="text-sm text-zinc-500">The record of a journey through the evolution of IT.</p>
+          <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-1">Hiep Le</h2>
+          <p class="text-zinc-500 max-w-xs">The record of a journey through the evolution of IT.</p>
         </div>
       </div>
     </section>
