@@ -22,7 +22,7 @@ export default defineNuxtConfig({
 
   ssr: false,
   nitro: {
-    preset: 'github-pages',
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       routes: ['/']
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   },
   app: {
     baseURL: '/personal.me/',
-    buildAssetsDir: 'internal-assets',
+    buildAssetsDir: 'assets',
     head: {
       titleTemplate: '%s · Hiep Le',
       htmlAttrs: { lang: 'en' },
