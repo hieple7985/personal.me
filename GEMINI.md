@@ -13,9 +13,18 @@ This project is optimized for parallel agent execution using **Kanban Code** and
 
 ## Tooling Context
 - **Kanban CLI**: `~/.local/bin/kanban`
+- **AutoSkills**: Comprehensive technical guidelines located in `.agents/skills/`.
+  - Nuxt, Vue, TypeScript, Tailwind, Vitest, Accessibility, and SEO best practices.
 - **Framework**: Nuxt 3 (SSR: false, Static)
 - **Styling**: Tailwind CSS
 - **Content**: Nuxt Content v3 (Shiki highlighting enabled)
+
+## Reference Architecture
+When making technical decisions, consult:
+- `.agents/skills/nuxt/SKILL.md`: For Nuxt-specific patterns.
+- `.agents/skills/vue-best-practices/SKILL.md`: For Vue 3 Composition API standards.
+- `.agents/skills/typescript-advanced-types/SKILL.md`: For type safety improvements.
+- `.agents/skills/accessibility/SKILL.md`: For WCAG compliance.
 
 ## File Editing Rules
 - No multiple `replace` calls on the same file in one turn.

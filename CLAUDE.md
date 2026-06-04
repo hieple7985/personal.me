@@ -35,10 +35,12 @@ npm run test            # Run Vitest
 3. **Avatar Update**: Replaced anime style with real person photo (w-32, high-res).
 4. **Testing Setup**: Integrated Vitest and Nuxt Test Utils.
 5. **Vercel/Firebase Removal**: Deleted `vercel.json`, deploy scripts, and old GitHub workflows.
-6. **Navigation Polish**: 44px touch targets, mobile menu transitions, and active states.
+7. **Navigation Polish**: 44px touch targets, mobile menu transitions, and active states.
+8. **AutoSkills Integration**: Installed 13 curated AI skills for Nuxt, Vue, and testing in `.agents/skills`.
 
 ## Key Patterns
 
 - **Agent Workflow**: ALWAYS use `git worktree` for tasks.
+- **Expert References**: Consult `.agents/skills/` for framework-specific best practices before major changes.
 - **UI/UX**: Follow `ui-ux-pro-max` guidelines (Accessibility first).
 - **Nuxt**: Use `v-if="data && data.length"` for collection rendering.
