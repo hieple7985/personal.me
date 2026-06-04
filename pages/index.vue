@@ -6,7 +6,7 @@
         <img src="/avatar.png" alt="Hiep Le" class="relative w-24 h-24 rounded-full border-2 border-white dark:border-zinc-800 object-cover shadow-xl" />
       </div>
       <div class="text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white mb-3 tracking-tight">Hiep Le</h1>
+        <h1 class="text-4xl md:text-5xl font-bold font-heading text-zinc-900 dark:text-white mb-3 tracking-tight">Hiep Le</h1>
         <p class="text-lg text-zinc-600 dark:text-zinc-400 font-medium">Sr. Technical Manager &amp; Solution Architect</p>
         <div class="flex items-center justify-center md:justify-start gap-2 mt-2 text-zinc-500 dark:text-zinc-500">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,12 +33,12 @@
     </section>
 
     <section class="pb-16 border-t border-zinc-200 dark:border-zinc-800/50 pt-12 animate-slide-up" style="animation-delay: 200ms">
-      <h2 class="text-sm font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Selected Experience</h2>
+      <h2 class="text-sm font-bold font-heading text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Selected Experience</h2>
 
       <div class="space-y-12">
         <div v-for="(job, i) in experience" :key="i" class="group relative">
           <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
-            <h3 class="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{{ job.role }}</h3>
+            <h3 class="text-xl font-bold font-heading text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{{ job.role }}</h3>
             <span class="text-zinc-400 dark:text-zinc-600 text-sm font-medium">{{ job.period }}</span>
           </div>
           <p class="text-indigo-600 dark:text-indigo-400 font-semibold mb-3">{{ job.company }}</p>
@@ -48,11 +48,11 @@
     </section>
 
     <section class="pb-16 border-t border-zinc-200 dark:border-zinc-800/50 pt-12 animate-slide-up" style="animation-delay: 300ms">
-      <h2 class="text-sm font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Projects & Initiatives</h2>
+      <h2 class="text-sm font-bold font-heading text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Projects & Initiatives</h2>
 
       <div class="grid grid-cols-1 gap-6">
         <div v-for="(project, i) in projects" :key="i" class="p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500/50 transition-all group">
-          <h3 class="text-lg font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{{ project.name }}</h3>
+          <h3 class="text-lg font-bold font-heading text-zinc-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{{ project.name }}</h3>
           <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4">{{ project.description }}</p>
           <div class="flex flex-wrap gap-2">
             <span v-for="tag in project.tags" class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-white dark:bg-zinc-950 text-zinc-500 dark:text-zinc-500 border border-zinc-200 dark:border-zinc-800">
@@ -64,7 +64,7 @@
     </section>
 
     <section class="pb-16 border-t border-zinc-200 dark:border-zinc-800/50 pt-12 animate-slide-up" style="animation-delay: 400ms">
-      <h2 class="text-sm font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Expertise</h2>
+      <h2 class="text-sm font-bold font-heading text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Expertise</h2>
       <div class="flex flex-wrap gap-3">
         <span v-for="skill in skills" :key="skill" class="px-4 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:bg-white dark:hover:bg-zinc-800 hover:border-indigo-500/30 transition-all cursor-default">
           {{ skill }}
@@ -73,7 +73,7 @@
     </section>
 
     <section class="pb-16 border-t border-zinc-200 dark:border-zinc-800/50 pt-12 animate-slide-up" style="animation-delay: 500ms">
-      <h2 class="text-sm font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Connect</h2>
+      <h2 class="text-sm font-bold font-heading text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Connect</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <a href="mailto:letronghiep1985@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-500/30 transition-all group">
           <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 group-hover:scale-110 transition-transform">

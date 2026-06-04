@@ -12,7 +12,8 @@ export default <Config>{
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif']
+        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        heading: ['Archivo', 'system-ui', 'sans-serif']
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
@@ -32,13 +33,24 @@ export default <Config>{
       typography: {
         DEFAULT: {
           css: {
-            '--tw-prose-body': 'rgb(228, 228, 231)',
+            '--tw-prose-body': 'rgb(113, 113, 122)',
+            '--tw-prose-headings': 'rgb(24, 24, 27)',
+            '--tw-prose-links': 'rgb(79, 70, 229)',
+            '--tw-prose-bold': 'rgb(24, 24, 27)',
+            '--tw-prose-code': 'rgb(124, 58, 237)',
+            '--tw-prose-pre-bg': 'rgb(244, 244, 245)',
+            maxWidth: 'none',
+            fontFamily: 'Space Grotesk'
+          }
+        },
+        invert: {
+          css: {
+            '--tw-prose-body': 'rgb(161, 161, 170)',
             '--tw-prose-headings': 'rgb(255, 255, 255)',
-            '--tw-prose-links': 'rgb(99, 102, 241)',
+            '--tw-prose-links': 'rgb(129, 140, 248)',
             '--tw-prose-bold': 'rgb(255, 255, 255)',
             '--tw-prose-code': 'rgb(167, 139, 250)',
-            '--tw-prose-pre-bg': 'rgb(24, 24, 27)',
-            maxWidth: 'none'
+            '--tw-prose-pre-bg': 'rgb(24, 24, 27)'
           }
         }
       }
