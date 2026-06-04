@@ -28,9 +28,12 @@ export default defineNuxtConfig({
       routes: ['/']
     }
   },
+  experimental: {
+    payloadExtraction: false
+  },
   app: {
     baseURL: '/personal.me/',
-    buildAssetsDir: 'assets',
+    buildAssetsDir: 'internal-assets',
     head: {
       titleTemplate: '%s · Hiep Le',
       htmlAttrs: { lang: 'en' },
