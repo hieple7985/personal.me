@@ -1,15 +1,15 @@
 <template>
-  <footer class="border-t border-zinc-800/50 py-8 mt-16">
+  <footer class="border-t border-zinc-200 dark:border-zinc-800/50 py-12 mt-16 transition-colors duration-300">
     <div class="max-w-5xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-sm text-zinc-500">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-sm text-zinc-500 dark:text-zinc-500">
           © {{ new Date().getFullYear() }} Hiep Le
         </div>
 
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-4">
           <a
             href="mailto:letronghiep1985@gmail.com"
-            class="text-zinc-500 hover:text-indigo-400 transition-colors"
+            class="w-11 h-11 flex items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900"
             aria-label="Email"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -22,7 +22,7 @@
             href="https://github.com/hieple7985"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-zinc-500 hover:text-indigo-400 transition-colors"
+            class="w-11 h-11 flex items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900"
             aria-label="GitHub"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -34,7 +34,7 @@
             href="https://linkedin.com/in/hieple7985"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-zinc-500 hover:text-indigo-400 transition-colors"
+            class="w-11 h-11 flex items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900"
             aria-label="LinkedIn"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
