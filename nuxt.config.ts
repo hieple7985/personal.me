@@ -22,10 +22,14 @@ export default defineNuxtConfig({
 
   ssr: false,
   nitro: {
-    preset: 'github-pages'
+    preset: 'github-pages',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/']
+    }
   },
   app: {
-    baseURL: '/', // Set to '/personal.me/' if not using a custom domain or root repo
+    baseURL: '/',
     buildAssetsDir: '/_nuxt/',
     head: {
       titleTemplate: '%s · Hiep Le',
