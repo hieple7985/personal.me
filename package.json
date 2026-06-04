@@ -8,6 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "test": "vitest",
     "deploy": "./scripts/deploy.sh",
     "deploy:staging": "npx vercel --confirm",
     "deploy:prod": "npx vercel --prod --confirm"
@@ -18,13 +19,17 @@
   },
   "devDependencies": {
     "@nuxt/content": "^3.7.1",
+    "@nuxt/test-utils": "^4.0.3",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.21",
     "better-sqlite3": "^12.4.1",
     "esbuild": "^0.25.10",
+    "happy-dom": "^20.10.1",
+    "playwright-core": "^1.60.0",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.18"
+    "tailwindcss": "^3.4.18",
+    "vitest": "^4.1.8"
   },
   "resolutions": {
     "confbox": "0.2.2"
