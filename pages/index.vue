@@ -1,61 +1,89 @@
 <template>
   <div class="max-w-3xl mx-auto">
-    <section class="flex flex-col md:flex-row items-center md:items-start gap-8 pb-16 animate-fade-in">
-      <div class="relative group">
-        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-        <img src="/avatar.png" alt="Hiep Le" class="relative w-24 h-24 rounded-full border-2 border-white dark:border-zinc-800 object-cover shadow-xl" />
+    <!-- Hero / Statement -->
+    <section class="pt-8 pb-20 animate-fade-in">
+      <div class="mb-10">
+        <div class="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/20 mb-6">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+          </span>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Archive Node: Vietnam</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold font-heading text-zinc-900 dark:text-white mb-6 leading-[1.1] tracking-tight">
+          20 years of engineering systems and leading teams.
+        </h1>
+        <p class="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
+          Senior Technical Manager & Solution Architect. Focused on digital transformation, system stability, and high-performance engineering cultures.
+        </p>
       </div>
-      <div class="text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-bold font-heading text-zinc-900 dark:text-white mb-3 tracking-tight">Hiep Le</h1>
-        <p class="text-lg text-zinc-600 dark:text-zinc-400 font-medium">Sr. Technical Manager &amp; Solution Architect</p>
-        <div class="flex items-center justify-center md:justify-start gap-2 mt-2 text-zinc-500 dark:text-zinc-500">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          <span class="text-sm">Vietnam</span>
+
+      <div class="flex items-center gap-6">
+        <img src="/avatar.png" alt="Hiep Le" class="w-16 h-16 rounded-2xl border border-zinc-200 dark:border-zinc-800 object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-sm" />
+        <div>
+          <h2 class="font-bold text-zinc-900 dark:text-white">Hiep Le</h2>
+          <p class="text-sm text-zinc-500">The record of a journey through the evolution of IT.</p>
         </div>
       </div>
     </section>
 
-    <section class="pb-16 animate-slide-up" style="animation-delay: 100ms">
-      <div class="prose prose-zinc dark:prose-invert max-w-none">
-        <p class="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
-          I'm a Senior IT Manager with 10+ years of leadership experience and 18 years as an engineer, including 8+ years focused on digital transformation, building teams, and delivering large-scale programs end-to-end.
-        </p>
-        <p class="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
-          I have a strong background in <span class="text-indigo-600 dark:text-indigo-400 font-medium">fintech/trading platforms</span> and <span class="text-indigo-600 dark:text-indigo-400 font-medium">mobile (Android &amp; iOS)</span>, alongside hands-on QA automation. I've worked across ERP implementation, CRM/CMS systems, and legacy refactoring in fintech, telecom, retail, supply chain, and services.
-        </p>
-        <p class="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
-          I also run some learning projects on <a href="https://www.kaggle.com/solokop" class="text-indigo-600 dark:text-indigo-400 hover:underline transition-colors font-medium">Kaggle</a> focusing on AI and machine learning. This site is where I share technical writing, book notes, and tools I build along the way.
-        </p>
+    <!-- Principles / Philosophy -->
+    <section class="pb-20 animate-slide-up" style="animation-delay: 100ms">
+      <h2 class="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.3em] mb-10">Operating Principles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div v-for="(p, i) in principles" :key="p.title" class="group">
+          <div class="text-indigo-600 dark:text-indigo-400 mb-3 font-mono text-sm opacity-50 group-hover:opacity-100 transition-opacity">0{{ i + 1 }}</div>
+          <h3 class="font-bold font-heading text-zinc-900 dark:text-white mb-2">{{ p.title }}</h3>
+          <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{{ p.desc }}</p>
+        </div>
       </div>
     </section>
 
-    <section class="pb-16 border-t border-zinc-200 dark:border-zinc-800/50 pt-12 animate-slide-up" style="animation-delay: 200ms">
-      <h2 class="text-sm font-bold font-heading text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Selected Experience</h2>
+    <!-- Journey (Timeline) -->
+    <section class="pb-20 border-t border-zinc-100 dark:border-zinc-800/50 pt-16 animate-slide-up" style="animation-delay: 200ms">
+      <h2 class="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.3em] mb-12">The Journey Archive</h2>
 
-      <div class="space-y-12">
-        <div v-for="(job, i) in experience" :key="i" class="group relative">
-          <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
-            <h3 class="text-xl font-bold font-heading text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{{ job.role }}</h3>
-            <span class="text-zinc-400 dark:text-zinc-600 text-sm font-medium">{{ job.period }}</span>
+      <div class="space-y-16">
+        <div v-for="(job, i) in experience" :key="i" class="relative pl-8 md:pl-0 group">
+          <!-- Timeline Line -->
+          <div class="hidden md:block absolute left-[120px] top-0 bottom-0 w-px bg-zinc-100 dark:bg-zinc-800"></div>
+
+          <div class="flex flex-col md:flex-row gap-4 md:gap-20">
+            <!-- Year -->
+            <div class="md:w-[100px] shrink-0">
+              <span class="font-mono text-sm font-bold text-indigo-600 dark:text-indigo-400">{{ job.period.split(' ')[0] }}</span>
+            </div>
+
+            <!-- Content -->
+            <div class="relative pb-2">
+              <!-- Mobile Dot -->
+              <div class="md:hidden absolute -left-8 top-1.5 w-2 h-2 rounded-full bg-indigo-500"></div>
+              <!-- Desktop Dot -->
+              <div class="hidden md:block absolute -left-[104px] top-1.5 w-2 h-2 rounded-full bg-zinc-300 dark:bg-zinc-700 group-hover:bg-indigo-500 transition-colors"></div>
+
+              <h3 class="text-xl font-bold font-heading text-zinc-900 dark:text-white mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                {{ job.role }}
+              </h3>
+              <p class="text-zinc-500 dark:text-zinc-500 font-medium text-sm mb-4">{{ job.company }}</p>
+              <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-xl">{{ job.description }}</p>
+            </div>
           </div>
-          <p class="text-indigo-600 dark:text-indigo-400 font-semibold mb-3">{{ job.company }}</p>
-          <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">{{ job.description }}</p>
         </div>
       </div>
     </section>
 
-    <section class="pb-16 border-t border-zinc-200 dark:border-zinc-800/50 pt-12 animate-slide-up" style="animation-delay: 300ms">
-      <h2 class="text-sm font-bold font-heading text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Projects & Initiatives</h2>
+    <!-- Selected Works -->
+    <section class="pb-20 border-t border-zinc-100 dark:border-zinc-800/50 pt-16 animate-slide-up" style="animation-delay: 300ms">
+      <h2 class="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.3em] mb-12">Selected Works & Projects</h2>
 
-      <div class="grid grid-cols-1 gap-6">
-        <div v-for="(project, i) in projects" :key="i" class="p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500/50 transition-all group">
-          <h3 class="text-lg font-bold font-heading text-zinc-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{{ project.name }}</h3>
-          <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4">{{ project.description }}</p>
-          <div class="flex flex-wrap gap-2">
-            <span v-for="tag in project.tags" class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-white dark:bg-zinc-950 text-zinc-500 dark:text-zinc-500 border border-zinc-200 dark:border-zinc-800">
+      <div class="grid grid-cols-1 gap-1">
+        <div v-for="(project, i) in projects" :key="i" class="group flex items-start justify-between py-6 border-b border-zinc-100 dark:border-zinc-800/50 last:border-0 hover:bg-zinc-50 dark:hover:bg-zinc-900/30 px-4 -mx-4 rounded-xl transition-colors">
+          <div class="max-w-xl">
+            <h3 class="text-lg font-bold font-heading text-zinc-900 dark:text-white mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{{ project.name }}</h3>
+            <p class="text-zinc-500 dark:text-zinc-500 text-sm leading-relaxed">{{ project.description }}</p>
+          </div>
+          <div class="hidden sm:flex flex-wrap gap-2 justify-end shrink-0">
+            <span v-for="tag in project.tags.slice(0, 2)" :key="tag" class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-600">
               {{ tag }}
             </span>
           </div>
@@ -63,33 +91,21 @@
       </div>
     </section>
 
-    <section class="pb-16 border-t border-zinc-200 dark:border-zinc-800/50 pt-12 animate-slide-up" style="animation-delay: 400ms">
-      <h2 class="text-sm font-bold font-heading text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Expertise</h2>
-      <div class="flex flex-wrap gap-3">
-        <span v-for="skill in skills" :key="skill" class="px-4 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:bg-white dark:hover:bg-zinc-800 hover:border-indigo-500/30 transition-all cursor-default">
-          {{ skill }}
-        </span>
-      </div>
-    </section>
-
-    <section class="pb-16 border-t border-zinc-200 dark:border-zinc-800/50 pt-12 animate-slide-up" style="animation-delay: 500ms">
-      <h2 class="text-sm font-bold font-heading text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em] mb-8">Connect</h2>
+    <!-- Footer Connect -->
+    <section class="pb-20 border-t border-zinc-100 dark:border-zinc-800/50 pt-16 animate-slide-up" style="animation-delay: 400ms">
+      <h2 class="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.3em] mb-10">Access Terminal</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <a href="mailto:letronghiep1985@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-500/30 transition-all group">
-          <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 group-hover:scale-110 transition-transform">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <span class="font-medium">Email</span>
+        <a href="mailto:letronghiep1985@gmail.com" class="flex items-center justify-between p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 hover:border-indigo-500/30 transition-all group">
+          <span class="font-bold font-heading text-zinc-900 dark:text-white">Email</span>
+          <svg class="w-5 h-5 text-zinc-400 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
         </a>
-        <a href="https://github.com/hieple7985" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-500/30 transition-all group">
-          <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 group-hover:scale-110 transition-transform">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-            </svg>
-          </div>
-          <span class="font-medium">GitHub</span>
+        <a href="https://github.com/hieple7985" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 hover:border-indigo-500/30 transition-all group">
+          <span class="font-bold font-heading text-zinc-900 dark:text-white">GitHub</span>
+          <svg class="w-5 h-5 text-zinc-400 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
         </a>
       </div>
     </section>
@@ -98,96 +114,78 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Home',
+  title: 'Archive',
   meta: [
-    { name: 'description', content: 'Hiep Le - Senior IT Manager & Solution Architect' }
+    { name: 'description', content: 'Hiep Le - 20 Years of Engineering & Leadership' }
   ]
 })
 
-const experience = [
+interface Principle {
+  title: string
+  desc: string
+}
+
+const principles: Principle[] = [
+  { title: 'Simplicity First', desc: 'Solving complex problems with the most minimal, maintainable solutions.' },
+  { title: 'System Thinking', desc: 'Designing components as part of a larger, resilient whole.' },
+  { title: 'Human Centric', desc: 'Building software and teams that empower and serve people.' }
+]
+
+interface Job {
+  role: string
+  company: string
+  period: string
+  description: string
+}
+
+const experience: Job[] = [
   {
     role: 'Advisor & Solution Architect',
     company: 'TDT, Hanoi (Client: Singapore)',
-    period: 'Apr 2025 - Present',
-    description: 'Advising delivery leadership and engineering teams on a large mobile trading platform (multi-market). Driving AI agent adoption for engineering productivity, leading QA automation workstream, and troubleshooting critical production stability issues.'
+    period: '2025 - Present',
+    description: 'Advising on large-scale mobile trading platforms. Driving AI agent adoption and stability workstreams.'
   },
   {
     role: 'CIO, Digital Transformation',
     company: 'BBS, Vietnam',
     period: '2022 - Present',
-    description: 'Spearheaded centralized ERP system development integrating retail and supply chain management. Led end-to-end project lifecycle, optimized SQL performance by 30%, managed cross-functional team across 50+ offices.'
+    description: 'Spearheading centralized ERP development and supply chain automation across 50+ offices.'
   },
   {
     role: 'Sr. Consultant',
     company: 'Laboon.org, Vietnam & Singapore',
     period: '2020 - 2022',
-    description: 'Covered strategy, project management, technical leadership, and solution architecture for blockchain projects and digital transformation initiatives. Led development of products with 100K+ downloads.'
+    description: 'Strategy and technical leadership for blockchain products with 100K+ downloads.'
   },
   {
     role: 'Sr. Developer & Data Engineer',
     company: 'First Telecom GmbH, Germany',
-    period: '2017 - 2022',
-    description: 'Designed and maintained complex applications including Bitcoin Payment App, billing systems, and integrated management platforms (CPF, Voice App, CCQ). Full-stack with Java, PHP, JavaScript, PostgreSQL.'
+    period: '2017 - 2020',
+    description: 'Architecting Bitcoin payment systems and billing engines for European telecom clients.'
   }
 ]
 
-const projects = [
-  {
-    name: 'BBS ERP & Retail Management',
-    description: 'Centralized ERP system integrating retail, supply chain, and warehouse management across 50+ offices. Optimized SQL performance by 30%, unified CRM, POS, and inventory modules.',
-    tags: ['ERP', 'Java', 'PostgreSQL', 'CRM', 'POS']
-  },
-  {
-    name: 'BBQ FoodTech Platform',
-    description: 'Full-suite F&B management platform including POS, CRM, shipment & delivery, and inventory tracking for food retail chains.',
-    tags: ['FoodTech', 'POS', 'CRM', 'Logistics']
-  },
-  {
-    name: 'Multi-Market Mobile Trading Platform',
-    description: 'Large-scale mobile trading platform serving multiple markets (SG, HK, JB, AU). Led QA automation workstream and drove AI agent adoption for engineering productivity.',
-    tags: ['Fintech', 'Mobile', 'QA Automation', 'AI Agents']
-  },
-  {
-    name: 'Blockchain & Web3 Products',
-    description: 'Built and contributed to blockchain products including decentralized exchanges, NFT platforms, DAO curation tools, and smart contract auditing (Immunefi). Products reached 100K+ downloads.',
-    tags: ['Blockchain', 'Web3', 'DeFi', 'Smart Contracts']
-  },
-  {
-    name: 'Forex Broker & CMS Platform',
-    description: 'Built forex broker systems and CMS platforms for Japanese financial clients, including trading chart engines, reporting tools, and automation systems.',
-    tags: ['Forex', 'Finance', 'Java', 'TradingView']
-  },
-  {
-    name: 'Bitcoin Payment & Billing Systems',
-    description: 'Designed Bitcoin Payment App, CPF billing engine, voice application platform, and call center queue management for European telecom clients.',
-    tags: ['Bitcoin', 'Telecom', 'Java', 'PHP', 'Billing']
-  },
-  {
-    name: 'Kaggle ML & AI Projects',
-    description: 'Experimenting with lottery prediction systems, AI agents, computer vision, and automated video generation. Active Kaggle contributor exploring ML applications.',
-    tags: ['Machine Learning', 'Python', 'Kaggle', 'AI']
-  },
-  {
-    name: 'Manga Mobile Reader',
-    description: 'Cross-platform manga/comic reader mobile application for the Japanese market.',
-    tags: ['Mobile', 'Android', 'iOS', 'Manga']
-  }
-]
+interface Project {
+  name: string
+  description: string
+  tags: string[]
+}
 
-const education = [
+const projects: Project[] = [
   {
-    degree: 'BSc in Information Technology',
-    school: 'University of Greenwich (UK)',
-    period: '2009 - 2010'
+    name: 'BBS ERP & Retail',
+    description: 'Centralized management for 50+ locations, unified CRM and supply chain.',
+    tags: ['ERP', 'Java', 'SQL']
+  },
+  {
+    name: 'Mobile Trading Engine',
+    description: 'Multi-market platform serving SG, HK, and AU markets with high throughput.',
+    tags: ['Fintech', 'Mobile']
+  },
+  {
+    name: 'Blockchain DeFi Suite',
+    description: 'DEX, NFT platforms, and DAO curation tools reaching significant scale.',
+    tags: ['Web3', 'Solidity']
   }
-]
-
-const skills = [
-  'Java', 'Python', 'JavaScript', 'TypeScript', 'SQL',
-  'React', 'Vue.js', 'React Native', 'Node.js', 'Django',
-  'Selenium', 'Appium', 'Robot Framework', 'Postman',
-  'AWS', 'GCP', 'PostgreSQL', 'MySQL', 'Firebase',
-  'Agile', 'Scrum', 'Project Management', 'Solution Architecture',
-  'Digital Transformation', 'Team Building'
 ]
 </script>
