@@ -11,7 +11,13 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   content: {
-    database: { connector: 'memory' }
+    database: { connector: 'memory' },
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark'
+      }
+    }
   },
 
   ssr: false,
