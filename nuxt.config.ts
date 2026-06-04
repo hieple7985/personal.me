@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   },
   app: {
     baseURL: '/personal.me/',
-    buildAssetsDir: '/_nuxt/',
+    buildAssetsDir: 'assets',
     head: {
       titleTemplate: '%s · Hiep Le',
       htmlAttrs: { lang: 'en' },
