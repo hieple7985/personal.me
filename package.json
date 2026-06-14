@@ -11,7 +11,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "nuxt": "^3.17.5",
+    "nuxt": "^3.21.8",
     "vue": "latest"
   },
   "devDependencies": {
@@ -21,7 +21,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.21",
     "better-sqlite3": "^12.4.1",
-    "esbuild": "^0.25.10",
+    "esbuild": "^0.28.1",
     "happy-dom": "^20.10.1",
     "playwright-core": "^1.60.0",
     "postcss": "^8.5.6",
